@@ -106,9 +106,9 @@
       }
 
       .back-brand {
-        width: 82%;
-        height: 112px;
-        flex: 0 0 112px;
+        width: 94%;
+        height: 148px;
+        flex: 0 0 148px;
         object-fit: contain;
       }
 
@@ -129,12 +129,12 @@
       }
 
       .back-subtitle {
-        margin-top: 3px;
-        color: #747d76;
+        margin-top: 0;
+        color: var(--green-deep);
         font-family: Inter, Arial, sans-serif;
-        font-size: 9px;
-        font-weight: 600;
-        letter-spacing: 0.16em;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
         direction: ltr;
       }
 
@@ -168,11 +168,12 @@
 
       .scan-hint {
         z-index: 1;
-        margin-top: 4px;
-        color: #858d87;
+        margin-top: 15px;
+        color: #294d35;
         font-family: Inter, Arial, sans-serif;
-        font-size: 9px;
-        letter-spacing: 0.18em;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
         direction: ltr;
       }
 
@@ -209,11 +210,11 @@
       }
 
       .back-company-en {
-        margin-top: 3px;
-        color: #7d857f;
+        color: var(--green-deep);
         font-family: Inter, Arial, sans-serif;
-        font-size: 8px;
-        letter-spacing: 0.12em;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
         direction: ltr;
       }
 
@@ -271,8 +272,8 @@
 
       .brand {
         width: 100%;
-        height: 124px;
-        flex: 0 0 124px;
+        height: 156px;
+        flex: 0 0 156px;
         object-fit: contain;
       }
 
@@ -281,7 +282,7 @@
       }
 
       .portrait {
-        width: 62%;
+        width: 56%;
         aspect-ratio: 1 / 0.84;
         flex: 0 0 auto;
         display: grid;
@@ -405,23 +406,17 @@
 
       .employee-number {
         align-items: flex-start;
-        text-align: right;
-        direction: rtl;
-      }
-
-      .employee-label-ar {
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 1.5;
-        white-space: nowrap;
+        text-align: left;
+        direction: ltr;
       }
 
       .employee-label-en {
-        margin-top: 1px;
-        color: rgba(255, 255, 255, 0.82);
+        color: #fff;
         font-family: Inter, Arial, sans-serif;
-        font-size: 10px;
-        font-weight: 400;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.2;
+        white-space: nowrap;
         direction: ltr;
       }
 
@@ -429,7 +424,7 @@
         position: relative;
         z-index: 1;
         width: 1px;
-        height: 38px;
+        height: 28px;
         background: rgba(255, 255, 255, 0.72);
       }
 
@@ -460,13 +455,13 @@
 
         .brand {
           width: 100%;
-          height: 108px;
-          flex-basis: 108px;
+          height: 136px;
+          flex-basis: 136px;
         }
 
         .back-brand {
-          height: 96px;
-          flex-basis: 96px;
+          height: 128px;
+          flex-basis: 128px;
         }
 
         .insert {
@@ -529,7 +524,7 @@
             <div class="insert">
               <img
                 class="brand"
-                src="ph-agri-logo.png"
+                src="ph-agri-logo.png?v=3"
                 alt="شعار فلدلفيا الزراعية PH. Agri"
               />
               <div class="brand-divider" aria-hidden="true"></div>
@@ -582,7 +577,6 @@
                 <img class="footer-leaf" src="leaf-mark.png?v=6" alt="" />
                 <div class="bottom">
                   <div class="employee-number">
-                    <div class="employee-label-ar" lang="ar">رقم الموظف</div>
                     <div class="employee-label-en" lang="en">Emp. No.</div>
                   </div>
                   <div class="number-separator" aria-hidden="true"></div>
@@ -597,11 +591,10 @@
           <article class="badge badge-back" aria-label="ظهر البطاقة">
             <img
               class="back-brand"
-              src="ph-agri-logo.png"
+              src="ph-agri-logo.png?v=3"
               alt="شعار فلدلفيا الزراعية PH. Agri"
             />
             <div class="back-divider" aria-hidden="true"></div>
-            <div class="back-title" lang="ar">تواصل مع شركتنا</div>
             <div class="back-subtitle" lang="en">CONNECT WITH OUR COMPANY</div>
             <div class="qr-wrap">
               <img
@@ -612,16 +605,12 @@
                 height="136"
               />
             </div>
-            <div class="scan-label" lang="ar">
-              امسح الرمز لزيارة صفحاتنا الرسمية
-            </div>
             <div class="scan-hint" lang="en">
               SCAN TO VISIT OUR OFFICIAL PAGES
             </div>
 
             <div class="back-bottom">
               <div>
-                <div class="back-company" lang="ar">فلدلفيا الزراعية</div>
                 <div class="back-company-en" lang="en">
                   PHELADELFIA AGRICULTURAL LLC
                 </div>
@@ -638,7 +627,7 @@
             d="M5.5 9a7 7 0 0 1 11.6-2.2L20 12M4 12l2.9 5.2A7 7 0 0 0 18.5 15"
           />
         </svg>
-        <span>اعرض ظهر البطاقة</span>
+        <span>Show back</span>
       </button>
     </main>
     <script>
@@ -651,11 +640,9 @@
         card.setAttribute("aria-pressed", String(flipped));
         card.setAttribute(
           "aria-label",
-          flipped ? "اقلب البطاقة لعرض الوجه" : "اقلب البطاقة لعرض الظهر",
+          flipped ? "Flip the card to the front" : "Flip the card to the back",
         );
-        flipLabel.textContent = flipped
-          ? "اعرض وجه البطاقة"
-          : "اعرض ظهر البطاقة";
+        flipLabel.textContent = flipped ? "Show front" : "Show back";
       }
 
       card.addEventListener("click", flipCard);

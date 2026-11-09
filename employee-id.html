@@ -105,11 +105,53 @@
         text-align: center;
       }
 
-      .back-brand {
-        width: 94%;
-        height: 148px;
-        flex: 0 0 148px;
-        object-fit: contain;
+      .back-brand,
+      .brand {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .brand-frame {
+        width: 90%;
+        height: 132px;
+        overflow: hidden;
+        flex: 0 0 132px;
+      }
+
+      .company-name {
+        margin-top: 8px;
+        text-align: center;
+      }
+
+      .company-name-ar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #163c28;
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 1.25;
+      }
+
+      .company-name-ar::before,
+      .company-name-ar::after {
+        content: "";
+        width: 22px;
+        height: 1px;
+        flex: 0 0 22px;
+        background: #163c28;
+      }
+
+      .company-name-en {
+        margin-top: 5px;
+        color: #2c3b32;
+        font-family: Inter, Arial, sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        direction: ltr;
       }
 
       .brand-divider,
@@ -117,7 +159,7 @@
         width: 52%;
         height: 1px;
         flex: 0 0 1px;
-        margin: 2px 0 14px;
+        margin: 8px 0 12px;
         background: linear-gradient(90deg, transparent, #c8a342, transparent);
       }
 
@@ -268,13 +310,6 @@
         overflow: hidden;
         background: linear-gradient(180deg, #fff 0%, #fff 77%, #f8faf7 100%);
         padding: 15px 18px 0;
-      }
-
-      .brand {
-        width: 100%;
-        height: 156px;
-        flex: 0 0 156px;
-        object-fit: contain;
       }
 
       .brand-divider {
@@ -453,15 +488,20 @@
           padding: 15px 18px 17px;
         }
 
-        .brand {
-          width: 100%;
-          height: 136px;
-          flex-basis: 136px;
+        .brand-frame {
+          width: 94%;
+          height: 116px;
+          flex-basis: 116px;
         }
 
-        .back-brand {
-          height: 128px;
-          flex-basis: 128px;
+        .company-name-ar {
+          gap: 8px;
+          font-size: 13px;
+        }
+
+        .company-name-en {
+          font-size: 9px;
+          letter-spacing: 0.08em;
         }
 
         .insert {
@@ -522,11 +562,17 @@
         >
           <article class="badge badge-front" aria-label="وجه البطاقة">
             <div class="insert">
-              <img
-                class="brand"
-                src="ph-agri-logo.png?v=3"
-                alt="شعار فلدلفيا الزراعية PH. Agri"
-              />
+              <div class="brand-frame">
+                <img
+                  class="brand"
+                  src="ph-agri-logo.png?v=4"
+                  alt="شعار فلادلفيا الزراعية PH. Agri"
+                />
+              </div>
+              <div class="company-name">
+                <div class="company-name-ar" lang="ar">فلادلفيا الزراعية ذ.م.م</div>
+                <div class="company-name-en" lang="en">PHELADELFIA AGRICULTURAL LLC</div>
+              </div>
               <div class="brand-divider" aria-hidden="true"></div>
 
               <div class="portrait">
@@ -589,11 +635,17 @@
           </article>
 
           <article class="badge badge-back" aria-label="ظهر البطاقة">
-            <img
-              class="back-brand"
-              src="ph-agri-logo.png?v=3"
-              alt="شعار فلدلفيا الزراعية PH. Agri"
-            />
+            <div class="brand-frame">
+              <img
+                class="back-brand"
+                src="ph-agri-logo.png?v=4"
+                alt="شعار فلادلفيا الزراعية PH. Agri"
+              />
+            </div>
+            <div class="company-name">
+              <div class="company-name-ar" lang="ar">فلادلفيا الزراعية ذ.م.م</div>
+              <div class="company-name-en" lang="en">PHELADELFIA AGRICULTURAL LLC</div>
+            </div>
             <div class="back-divider" aria-hidden="true"></div>
             <div class="back-subtitle" lang="en">CONNECT WITH OUR COMPANY</div>
             <div class="qr-wrap">

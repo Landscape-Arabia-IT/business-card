@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Mohamed Abdal Ghani, Manager and Partner at Pheladelfia Agricultural LLC."
+    />
+    <title>Mohamed Abdal Ghani | Pheladelfia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&amp;family=Inter:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --green: #08682d;
+        --green-dark: #034622;
+        --green-deep: #05391f;
+        --gold: #d3a82c;
+        --ink: #171918;
+        --muted: #5d675f;
+        --paper: #f4f5f1;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, Arial, sans-serif;
+      }
+
+      .profile {
+        display: grid;
+        grid-template-columns: minmax(300px, 44vw) minmax(0, 1fr);
+        min-height: 100vh;
+      }
+
+      .portrait {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin: 0;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            ellipse at 50% 18%,
+            rgba(211, 168, 44, 0.22),
+            transparent 42%
+          ),
+          linear-gradient(
+            180deg,
+            #0c4e2c 0%,
+            var(--green-deep) 58%,
+            #032818 100%
+          );
+      }
+
+      .portrait img {
+        width: min(100%, 520px);
+        height: min(92vh, 820px);
+        object-fit: contain;
+        object-position: center bottom;
+      }
+
+      .portrait::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 0;
+        padding: 40px 7vw 48px;
+      }
+
+      .logo {
+        width: min(210px, 46vw);
+        height: auto;
+        display: block;
+        margin-bottom: 36px;
+      }
+
+      .company-ar {
+        margin: 0;
+        color: var(--green-dark);
+        font-family: Cairo, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .company-en {
+        margin: 4px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+      }
+
+      h1 {
+        margin: 22px 0 0;
+        font-size: clamp(44px, 5.4vw, 78px);
+        font-weight: 800;
+        letter-spacing: -0.035em;
+        line-height: 0.92;
+      }
+
+      h1 span {
+        display: block;
+        margin-bottom: 6px;
+        color: #3d4a40;
+        font-size: 0.42em;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        line-height: 1;
+      }
+
+      .role {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 18px 0 0;
+        color: var(--green);
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .role::before {
+        content: "";
+        width: 36px;
+        height: 2px;
+        background: var(--gold);
+      }
+
+      .facts {
+        display: grid;
+        gap: 0;
+        width: min(100%, 520px);
+        margin: 36px 0 0;
+      }
+
+      .facts a {
+        display: block;
+        padding: 16px 0;
+        border-top: 1px solid #dde3db;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .facts a:last-child {
+        border-bottom: 1px solid #dde3db;
+      }
+
+      .facts a:hover strong {
+        color: var(--green);
+      }
+
+      .facts small {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .facts strong {
+        display: block;
+        margin-top: 4px;
+        font-size: clamp(18px, 2vw, 22px);
+        font-weight: 700;
+        overflow-wrap: anywhere;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .actions a,
+      .actions button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 46px;
+        padding: 0 18px;
+        border: 1.5px solid var(--green);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--green-dark);
+        font:
+          700 14px Inter,
+          Arial,
+          sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .actions a:first-child,
+      .actions button.primary {
+        border-color: var(--green);
+        background: var(--green);
+        color: #fff;
+      }
+
+      .actions a:hover,
+      .actions button:hover {
+        background: #e7f0e8;
+      }
+
+      .actions a:first-child:hover {
+        background: var(--green-dark);
+      }
+
+      .actions svg {
+        width: 16px;
+        height: 16px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .actions a:focus-visible,
+      .actions button:focus-visible,
+      .facts a:focus-visible {
+        outline: 3px solid var(--gold);
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 860px) {
+        .profile {
+          display: block;
+        }
+
+        .portrait {
+          height: 68vw;
+          min-height: 300px;
+          max-height: 460px;
+        }
+
+        .portrait img {
+          width: auto;
+          height: 100%;
+          max-width: none;
+        }
+
+        .details {
+          padding: 28px 22px 40px;
+        }
+
+        .logo {
+          margin-bottom: 28px;
+        }
+
+        h1 {
+          font-size: 52px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        h1 {
+          font-size: 44px;
+        }
+
+        .actions a,
+        .actions button {
+          flex: 1 1 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="profile">
+      <figure class="portrait">
+        <img src="hero.png" alt="Mohamed Abdal Ghani" />
+      </figure>
+
+      <section class="details">
+        <img class="logo" src="ph-agri-logo.png" alt="PH. Agri" />
+        <p class="company-ar" lang="ar">فلادلفيا الزراعية ذ.م.م</p>
+        <p class="company-en">PHELADELFIA AGRICULTURAL LLC</p>
+        <h1><span>Mohamed</span>Abdal Ghani</h1>
+        <p class="role">Manager &amp; Partner</p>
+
+        <div class="facts">
+          <a href="tel:+971506670263">
+            <small>Mobile</small>
+            <strong>050 667 0263</strong>
+          </a>
+          <a href="mailto:m.abdulghani@pheladelfia.com">
+            <small>Email</small>
+            <strong>m.abdulghani@pheladelfia.com</strong>
+          </a>
+        </div>
+
+        <div class="actions">
+          <a href="tel:+971506670263">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6.5 4.5h3l1.5 3.5-2 1.2a12 12 0 0 0 5.8 5.8l1.2-2 3.5 1.5v3A1.5 1.5 0 0 1 18 19 14.5 14.5 0 0 1 5 6a1.5 1.5 0 0 1 1.5-1.5Z"
+              />
+            </svg>
+            Call
+          </a>
+          <a href="https://wa.me/971506670263" target="_blank" rel="noopener">
+            WhatsApp
+          </a>
+          <a href="mailto:m.abdulghani@pheladelfia.com">Email</a>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.getElementById("saveContact").addEventListener("click", () => {
+        const card = [
+          "BEGIN:VCARD",
+          "VERSION:3.0",
+          "N:Abdal Ghani;Mohamed;;;",
+          "FN:Mohamed Abdal Ghani",
+          "ORG:Pheladelfia Agricultural LLC",
+          "TITLE:Manager & Partner",
+          "TEL;TYPE=CELL,VOICE:+971506670263",
+          "EMAIL;TYPE=INTERNET:m.abdulghani@pheladelfia.com",
+          "END:VCARD",
+        ].join("\r\n");
+        const file = new Blob([card], { type: "text/vcard" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(file);
+        link.download = "Mohamed-Abdal Ghani.vcf";
+        link.click();
+        URL.revokeObjectURL(link.href);
+      });
+    </script>
+  </body>
+</html>

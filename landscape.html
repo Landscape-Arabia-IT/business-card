@@ -15,10 +15,10 @@
     <style>
       :root {
         color-scheme: light;
-        --green: #08682d;
-        --green-dark: #034622;
-        --green-deep: #00371f;
-        --gold: #d3a82c;
+        --green: #04412a;
+        --green-dark: #033522;
+        --green-deep: #022818;
+        --gold: #6d0308;
         --ink: #171918;
       }
 
@@ -88,7 +88,7 @@
         inset: 0;
         overflow: hidden;
         border-radius: 20px;
-        background: #fff;
+        background: #033522;
         box-shadow: 0 10px 30px rgba(20, 28, 22, 0.16);
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
@@ -100,10 +100,20 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px 24px 18px;
-        background: linear-gradient(155deg, #fff 0%, #fbfcfa 68%, #f2f5f1 100%);
+        padding: 0;
+        background: #033522;
         transform: rotateY(180deg);
         text-align: center;
+      }
+
+      .head {
+        width: 100%;
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        padding: 12px 16px 10px;
+        background: #fff;
+        border-bottom: 6px solid #6d0308;
       }
 
       .back-brand,
@@ -114,7 +124,7 @@
       }
 
       .brand-frame {
-        width: 88%;
+        width: 78%;
         height: auto;
         overflow: visible;
         flex: 0 0 auto;
@@ -155,44 +165,27 @@
         direction: ltr;
       }
 
-      .brand-divider,
-      .back-divider {
-        width: 52%;
-        height: 1px;
-        flex: 0 0 1px;
-        margin: 8px 0 12px;
-        background: linear-gradient(90deg, transparent, #c8a342, transparent);
-      }
-
-      .back-title {
-        color: var(--green-deep);
-        font-size: 17px;
-        font-weight: 800;
-        line-height: 1.5;
-      }
-
       .back-subtitle {
-        margin-top: 0;
-        color: var(--green-deep);
+        margin-top: 22px;
+        color: #fff;
         font-family: Inter, Arial, sans-serif;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 700;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.16em;
         direction: ltr;
       }
 
       .qr-wrap {
         position: relative;
         z-index: 1;
-        width: 158px;
-        height: 158px;
+        width: 176px;
+        height: 176px;
         display: grid;
         place-items: center;
-        margin-top: 20px;
-        border: 1px solid #e3e8e2;
-        border-radius: 16px;
+        margin-top: 18px;
+        border: 0;
+        border-radius: 2px;
         background: #fff;
-        box-shadow: 0 8px 22px rgba(26, 53, 34, 0.09);
       }
 
       .company-qr {
@@ -204,19 +197,19 @@
       .scan-label {
         z-index: 1;
         margin-top: 15px;
-        color: #294d35;
+        color: #04412a;
         font-size: 14px;
         font-weight: 600;
       }
 
       .scan-hint {
         z-index: 1;
-        margin-top: 15px;
-        color: #294d35;
+        margin: 16px 20px 0;
+        color: rgba(255, 255, 255, 0.82);
         font-family: Inter, Arial, sans-serif;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 600;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.1em;
         direction: ltr;
       }
 
@@ -242,8 +235,9 @@
         align-items: center;
         justify-content: center;
         margin-top: auto;
-        padding-top: 12px;
-        border-top: 1px solid #e2e7e0;
+        padding: 16px 18px;
+        background: #022818;
+        box-shadow: inset 0 4px 0 #6d0308;
       }
 
       .back-company {
@@ -253,11 +247,11 @@
       }
 
       .back-company-en {
-        color: var(--green-deep);
+        color: #fff;
         font-family: Inter, Arial, sans-serif;
         font-size: 12px;
         font-weight: 700;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.22em;
         direction: ltr;
       }
 
@@ -309,23 +303,20 @@
         flex-direction: column;
         align-items: center;
         overflow: hidden;
-        background: linear-gradient(180deg, #fff 0%, #fff 77%, #f8faf7 100%);
-        padding: 15px 18px 0;
-      }
-
-      .brand-divider {
-        margin-bottom: 8px;
+        background: #033522;
+        padding: 0;
       }
 
       .portrait {
-        width: 56%;
-        aspect-ratio: 1 / 0.84;
+        width: 50%;
+        aspect-ratio: 1 / 1.08;
         flex: 0 0 auto;
         display: grid;
         place-items: center;
+        margin-top: 18px;
         overflow: hidden;
         border: 0;
-        border-radius: 14px;
+        border-radius: 2px;
         background: transparent;
       }
 
@@ -346,9 +337,10 @@
 
       .employee {
         flex: 0 0 auto;
-        margin-top: 10px;
+        margin-top: 14px;
+        padding: 0 16px;
         text-align: center;
-        line-height: 1.24;
+        line-height: 1.1;
       }
 
       .employee-en,
@@ -359,73 +351,61 @@
       }
 
       .employee-en {
-        color: #171918;
-        font-size: clamp(17px, 5.2vw, 21px);
-        font-weight: 800;
-      }
-
-      .divider {
-        width: 68%;
-        height: 1px;
-        flex: 0 0 1px;
-        margin: 10px 0 8px;
-        background: linear-gradient(90deg, transparent, #c8a342, transparent);
+        color: #fff;
+        font-size: clamp(22px, 5.6vw, 26px);
+        font-weight: 700;
+        letter-spacing: -0.02em;
       }
 
       .job {
         position: relative;
         z-index: 2;
+        width: 100%;
         flex: 0 0 auto;
-        margin-bottom: 2px;
+        margin-top: auto;
+        padding: 7px 16px;
+        background: #6d0308;
         text-align: center;
-        line-height: 1.3;
+        line-height: 1.2;
       }
 
       .job-en {
-        color: #37433a;
-        font-size: clamp(15px, 4.3vw, 18px);
+        color: #fff;
+        font-size: 12px;
         font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
       }
 
       .footer {
         position: relative;
         z-index: 1;
-        width: calc(100% + 36px);
-        flex: 0 0 126px;
-        margin-top: auto;
-        margin-inline: -18px;
+        width: 100%;
+        flex: 0 0 auto;
+        margin-top: 0;
+        background: #022818;
         color: #fff;
       }
 
-      .footer-wave {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 176px;
-        display: block;
-        z-index: 0;
-        pointer-events: none;
-      }
-
       .footer-leaf {
-        position: absolute;
+        position: static;
         z-index: 1;
-        right: 14px;
-        bottom: 20px;
-        width: 84px;
+        width: 108px;
         height: auto;
+        flex: 0 0 auto;
+        display: block;
         pointer-events: none;
       }
 
       .bottom {
         position: relative;
         z-index: 1;
-        height: 100%;
         display: flex;
         align-items: center;
-        gap: 14px;
-        padding: 22px 112px 10px 22px;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 96px;
+        padding: 14px 16px 16px 18px;
         direction: ltr;
       }
 
@@ -446,21 +426,15 @@
       }
 
       .employee-label-en {
-        color: #fff;
+        color: rgba(255, 255, 255, 0.72);
         font-family: Inter, Arial, sans-serif;
-        font-size: 13px;
+        font-size: 10px;
         font-weight: 600;
         line-height: 1.2;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
         white-space: nowrap;
         direction: ltr;
-      }
-
-      .number-separator {
-        position: relative;
-        z-index: 1;
-        width: 1px;
-        height: 28px;
-        background: rgba(255, 255, 255, 0.72);
       }
 
       .employee-id {
@@ -473,10 +447,169 @@
         z-index: 1;
         color: #fff;
         font-family: Inter, Arial, sans-serif;
-        font-size: clamp(20px, 5.5vw, 23px);
+        margin-top: 3px;
+        font-size: 26px;
         font-weight: 700;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.04em;
+        line-height: 1;
         direction: ltr;
+      }
+
+      .badge {
+        background: #fff;
+      }
+
+      .insert,
+      .badge-back {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 18px 22px 22px;
+        background: #fff;
+        direction: ltr;
+      }
+
+      .main-col {
+        width: 100%;
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .brand-frame {
+        width: 74%;
+        height: auto;
+        flex: 0 0 auto;
+        padding: 0;
+        border: 0;
+      }
+
+      .portrait {
+        width: 52%;
+        height: auto;
+        aspect-ratio: 1 / 1.05;
+        flex: 0 0 auto;
+        margin: 14px 0 0;
+        border: 0;
+        border-radius: 12px;
+      }
+
+      .employee {
+        margin: 16px 0 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      .employee-en {
+        color: #10241c;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+      }
+
+      .job {
+        width: auto;
+        margin: 5px 0 0;
+        padding: 0;
+        background: transparent;
+        text-align: center;
+      }
+
+      .job-en {
+        color: #6d0308;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .insert {
+        padding-bottom: 0;
+      }
+
+      .footer {
+        width: calc(100% + 44px);
+        flex: 0 0 auto;
+        margin-top: auto;
+        margin-inline: -22px;
+        background: #022818;
+      }
+
+      .footer-plate {
+        display: flex;
+        align-items: stretch;
+        min-height: 108px;
+        border-top: 8px solid #6d0308;
+      }
+
+      .emp-line {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 14px 16px 16px 22px;
+        border-right: 1px solid rgba(255, 255, 255, 0.22);
+        text-align: left;
+      }
+
+      .emp-line .employee-label-en {
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-align: left;
+      }
+
+      .emp-line .number {
+        color: #fff;
+        margin-top: 4px;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-align: left;
+      }
+
+      .mark-well {
+        width: 128px;
+        flex: 0 0 128px;
+        display: grid;
+        place-items: center;
+        padding: 14px 16px 16px;
+        background: #033d28;
+      }
+
+      .footer-mark {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .back-subtitle {
+        margin-top: 14px;
+        color: #6d0308;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+      }
+
+      .badge-back .qr-wrap {
+        width: 158px;
+        height: 158px;
+        margin-top: 16px;
+        border: 1px solid #e4ebe6;
+        border-radius: 12px;
+        box-shadow: none;
+      }
+
+      .badge-back .scan-hint {
+        margin: 12px 0 0;
+        color: #3c4f44;
+        font-size: 11px;
       }
 
       @media (max-width: 390px) {
@@ -484,14 +617,14 @@
           width: min(100%, 340px);
         }
 
-        .display .badge-back {
-          padding: 15px 18px 17px;
-        }
-
         .display .brand-frame {
-          width: 92%;
+          width: 100%;
           height: auto;
           flex-basis: auto;
+        }
+
+        .display .portrait {
+          width: 58%;
         }
 
         .display .company-name-ar {
@@ -504,14 +637,28 @@
           letter-spacing: 0.08em;
         }
 
-        .display .insert {
-          padding-inline: 12px;
+        .display .badge-back .qr-wrap {
+          width: 136px;
+          height: 136px;
+          margin-top: 12px;
         }
 
-        .display .qr-wrap {
-          width: 146px;
-          height: 146px;
-          margin-top: 16px;
+        .display .employee-en {
+          font-size: 18px;
+        }
+
+        .display .footer {
+          width: calc(100% + 44px);
+          margin-inline: -22px;
+        }
+
+        .display .emp-line .number {
+          font-size: 22px;
+        }
+
+        .display .mark-well {
+          width: 108px;
+          flex-basis: 108px;
         }
 
         .display .company-qr {
@@ -519,25 +666,20 @@
           height: 124px;
         }
 
-        .display .footer {
-          width: calc(100% + 24px);
-          flex-basis: 116px;
-          margin-inline: -12px;
-        }
-
-        .display .footer-wave {
-          height: 158px;
+        .display .footer,
+        .display .back-bottom {
+          width: 100%;
+          margin: 0;
         }
 
         .display .bottom {
-          gap: 12px;
-          padding: 18px 100px 8px 16px;
+          gap: 8px;
+          min-height: 84px;
+          padding: 12px 12px 14px 14px;
         }
 
         .display .footer-leaf {
-          right: 12px;
-          bottom: 8px;
-          width: 74px;
+          width: 88px;
         }
       }
 
@@ -604,17 +746,14 @@
       .zebra-print-layout .company-name-ar {
         white-space: nowrap;
       }
-      .zebra-print-layout .footer-wave {
-        height: 161px;
-      }
       .zebra-print-layout .employee-en {
-        font-size: 21px;
+        font-size: 22px;
       }
       .zebra-print-layout .job-en {
-        font-size: 18px;
+        font-size: 12px;
       }
       .zebra-print-layout .number {
-        font-size: 23px;
+        font-size: 22px;
       }
     </style>
   </head>
@@ -631,68 +770,36 @@
         >
           <article class="badge badge-front" aria-label="وجه البطاقة">
             <div class="insert">
-              <div class="brand-frame">
-                <img
-                  class="brand"
-                  src="landscape-logo.jpg"
-                  alt="شعار لاندسكيب أريبيا Landscape Arabia"
-                />
+              <div class="main-col">
+                <div class="brand-frame">
+                  <img
+                    class="brand"
+                    src="landscape-logo.jpg"
+                    alt="شعار لاندسكيب أريبيا Landscape Arabia"
+                  />
+                </div>
+                <div class="portrait">
+                  <img src="man.png" alt="John Doe" />
+                </div>
+                <div class="employee">
+                  <div class="employee-en" lang="en">John Doe</div>
+                </div>
+                <div class="job">
+                  <div class="job-en" lang="en">HR Manager</div>
+                </div>
               </div>
-              <div class="brand-divider" aria-hidden="true"></div>
-
-              <div class="portrait">
-                <img src="man.png" alt="John Doe" />
-              </div>
-
-              <div class="employee">
-                <div class="employee-en" lang="en">John Doe</div>
-              </div>
-
-              <div class="divider" aria-hidden="true"></div>
-
-              <div class="job">
-                <div class="job-en" lang="en">HR Manager</div>
-              </div>
-
               <div class="footer">
-                <svg
-                  class="footer-wave"
-                  viewBox="0 0 360 176"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
-                  <defs>
-                    <linearGradient id="waveBand" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#f2c85a" />
-                      <stop offset="42%" stop-color="#8d7340" />
-                      <stop offset="100%" stop-color="#05391f" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    fill="#05391f"
-                    d="M0 62C48 54 96 66 142 86C176 102 204 96 246 70C286 46 324 28 360 18V176H0Z"
-                  />
-                  <path
-                    fill="url(#waveBand)"
-                    d="M0 42C46 34 94 44 138 64C172 80 198 76 242 50C284 26 322 10 360 2V18C324 28 286 46 246 70C204 96 176 102 142 86C96 66 48 54 0 62Z"
-                  />
-                  <path
-                    fill="none"
-                    stroke="#f0c24a"
-                    stroke-width="2.4"
-                    stroke-linecap="round"
-                    vector-effect="non-scaling-stroke"
-                    d="M0 42C46 34 94 44 138 64C172 80 198 76 242 50C284 26 322 10 360 2"
-                  />
-                </svg>
-                <img class="footer-leaf" src="leaf-mark.png?v=6" alt="" />
-                <div class="bottom">
-                  <div class="employee-number">
-                    <div class="employee-label-en" lang="en">Emp. No.</div>
+                <div class="footer-plate">
+                  <div class="emp-line">
+                    <div class="employee-number">
+                      <div class="employee-label-en" lang="en">Emp. No.</div>
+                    </div>
+                    <div class="employee-id">
+                      <div class="number">12345</div>
+                    </div>
                   </div>
-                  <div class="number-separator" aria-hidden="true"></div>
-                  <div class="employee-id">
-                    <div class="number">12345</div>
+                  <div class="mark-well">
+                    <img class="footer-mark" src="landscape-mark.png?v=3" alt="" />
                   </div>
                 </div>
               </div>
@@ -700,32 +807,25 @@
           </article>
 
           <article class="badge badge-back" aria-label="ظهر البطاقة">
-            <div class="brand-frame">
-              <img
-                class="back-brand"
-                src="landscape-logo.jpg"
-                alt="شعار لاندسكيب أريبيا Landscape Arabia"
-              />
-            </div>
-            <div class="back-divider" aria-hidden="true"></div>
-            <div class="back-subtitle" lang="en">CONNECT WITH OUR COMPANY</div>
-            <div class="qr-wrap">
-              <img
-                class="company-qr"
-                src="landscape-qr.png"
-                alt="رمز QR لزيارة صفحات الشركة الرسمية"
-                width="136"
-                height="136"
-              />
-            </div>
-            <div class="scan-hint" lang="en">
-              SCAN TO VISIT OUR OFFICIAL PAGES
-            </div>
-
-            <div class="back-bottom">
-              <div>
-                <div class="back-company-en" lang="en">LANDSCAPE ARABIA</div>
+            <div class="main-col">
+              <div class="brand-frame">
+                <img
+                  class="back-brand"
+                  src="landscape-logo.jpg"
+                  alt="شعار لاندسكيب أريبيا Landscape Arabia"
+                />
               </div>
+              <div class="back-subtitle" lang="en">CONNECT WITH OUR COMPANY</div>
+              <div class="qr-wrap">
+                <img
+                  class="company-qr"
+                  src="landscape-qr.png"
+                  alt="رمز QR لزيارة صفحات الشركة الرسمية"
+                  width="136"
+                  height="136"
+                />
+              </div>
+              <div class="scan-hint" lang="en">SCAN TO VISIT OUR OFFICIAL PAGES</div>
             </div>
           </article>
         </div>

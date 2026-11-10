@@ -318,9 +318,10 @@
       }
 
       .portrait {
-        width: 56%;
-        aspect-ratio: 1 / 0.84;
-        flex: 0 0 auto;
+        width: 48%;
+        max-height: 210px;
+        aspect-ratio: 430 / 580;
+        flex: 0 1 auto;
         display: grid;
         place-items: center;
         overflow: hidden;
@@ -333,8 +334,8 @@
         width: 100%;
         height: 100%;
         display: block;
-        object-fit: cover;
-        object-position: 50% 22%;
+        object-fit: contain;
+        object-position: center center;
       }
 
       .portrait svg {
@@ -360,7 +361,7 @@
 
       .employee-en {
         color: #171918;
-        font-size: clamp(17px, 5.2vw, 21px);
+        font-size: clamp(15px, 4.6vw, 18px);
         font-weight: 800;
       }
 
@@ -385,6 +386,16 @@
         color: #37433a;
         font-size: clamp(15px, 4.3vw, 18px);
         font-weight: 700;
+      }
+
+      .contact-en {
+        margin-top: 6px;
+        color: #5a675e;
+        font-family: Inter, Arial, sans-serif;
+        font-size: clamp(11px, 3.2vw, 12px);
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        direction: ltr;
       }
 
       .footer {
@@ -473,9 +484,9 @@
         z-index: 1;
         color: #fff;
         font-family: Inter, Arial, sans-serif;
-        font-size: clamp(20px, 5.5vw, 23px);
+        font-size: clamp(16px, 4.6vw, 19px);
         font-weight: 700;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.04em;
         direction: ltr;
       }
 
@@ -649,17 +660,17 @@
               <div class="brand-divider" aria-hidden="true"></div>
 
               <div class="portrait">
-                <img src="hero.png" alt="John Doe" />
+                <img src="hero.png" alt="Mohamed ABDALGHANI" />
               </div>
 
               <div class="employee">
-                <div class="employee-en" lang="en">John Doe</div>
+                <div class="employee-en" lang="en">Mohamed ABDALGHANI</div>
               </div>
 
               <div class="divider" aria-hidden="true"></div>
 
               <div class="job">
-                <div class="job-en" lang="en">HR Manager</div>
+                <div class="job-en" lang="en">Manager &amp; Partner</div>
               </div>
 
               <div class="footer">
@@ -689,11 +700,11 @@
                 <img class="footer-leaf" src="leaf-mark.png?v=6" alt="" />
                 <div class="bottom">
                   <div class="employee-number">
-                    <div class="employee-label-en" lang="en">Emp. No.</div>
+                    <div class="employee-label-en" lang="en">Mobile</div>
                   </div>
                   <div class="number-separator" aria-hidden="true"></div>
                   <div class="employee-id">
-                    <div class="number">12345</div>
+                    <div class="number">0506670263</div>
                   </div>
                 </div>
               </div>
